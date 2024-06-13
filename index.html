@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notekeep</title>
+</head>
+<body>
+      <header class="heading">
+            <h1>Work To be Done</h1>
+            <button class="task">Delete All Data</button>
+      </header>
+      <section class="notes">
+      </section>
+      <section>
+        <div class="content">
+          <input type="text" id="createtitle" placeholder="Type a Task Name">
+          <textarea class="textarea" name="content" id="" cols="20" rows="8" placeholder="Task Content"></textarea>
+          <button id="createButton">Create Task</button>
+        </div>
+      </section>
+
+    <script src="./main.js"></script>
+</body>
+</html>
+<style>
+    *{
+        margin: 0;
+        padding: 0;  
+    }
+    header{
+        background-color: white;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        padding:1rem;
+    }
+    .task{
+        padding:0.8rem ;
+        font-size:0.8rem;
+        font-weight: bold;
+        color: tomato;
+        background-color: white;
+        border-radius: 12px;
+        border: 1px solid darkgray;
+    }
+    body{
+        background-color: #75DA8B;
+    }
+    .notes{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        padding:0.8rem;
+    }
+    .notes .note{
+        background-color: white;
+        padding: 0.8rem;
+        margin: 1rem;
+        border-radius: 12px;
+
+    }
+    .note button{
+        padding:10px ;
+        font-size:0.7rem;
+        font-weight: bold;
+        color:blue;
+        background-color: white;
+        border-radius: 12px;
+        border: 1px solid darkgray; 
+        margin-top: 0.8rem;
+    }
+    .content{
+        display: flex;
+        flex-direction:column;
+        width: 40%;
+        margin-left: 2rem;
+        background-color: white;
+    }
+    .content input{
+        width: 70%;
+        margin: 1rem 0.3rem;
+        border: none;
+        border-bottom: 1px solid darkgray;
+        outline: none;
+        margin-left: 8px;
+    }
+    .content .textarea{
+        border: none;
+        outline: none;
+        font-size: 0.8rem;
+        margin-left:8px;
+    }
+    .content button{
+        padding:10px ;
+        font-size:0.8rem;
+        font-weight: bold;
+        color:blue;
+        background-color: white;
+        border-radius: 12px;
+        border: 1px solid darkgray; 
+        margin: 0.8rem 0;
+        width: 20%;
+        margin-left: 2rem;
+    }
+</style>
